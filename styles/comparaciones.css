@@ -1,0 +1,49 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8fff8f;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: underline;
+  color: #333;
+  font-weight: bold;
+} */
+
+.iconos img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+main {
+  padding: 20px;
+}
