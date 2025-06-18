@@ -1,49 +1,100 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+#sidebar {
+            width: 0;
+            background: #2c3e50;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: width 0.3s;
+            overflow: hidden;
+        }
+        #sidebar.cerrada {
+            width: 60px;
+        }
+        #sidebar.mostrar {
+            width: 250px;
+        }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  background-color: #eee;
-}
+        #sidebar-header {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #34495e;
+        }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #8fff8f;
-  padding: 10px 20px;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
+        #toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-.logo img {
-  width: 50px;
-  height: 50px;
-}
+        #sidebar-nav {
+            list-style: none;
+            padding: 20px 0;
+        }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
+        #sidebar-nav li {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
 
-.nav-links a {
-  text-decoration: underline;
-  color: #333;
-  font-weight: bold;
-} */
+        #sidebar-nav li:hover {
+            background: #34495e;
+        }
 
-.iconos img {
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
-}
 
-main {
-  padding: 20px;
-}
+        .formulario-contacto {
+            margin: 50px auto;
+            max-width: 600px;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .formulario-contacto h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .campo input,
+        .campo textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .campo textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background: #2980b9;
+        }

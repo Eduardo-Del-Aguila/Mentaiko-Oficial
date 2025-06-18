@@ -7,116 +7,236 @@
   <link rel="stylesheet" href="./styles/principal.css" />
   <link rel="stylesheet" href="./styles/animations.css" />
   <link rel="stylesheet" href="./styles/responsive.css">
+  <script defer src="scripts/core/principal.js"></script>
+  <script defer src="scripts/utils/navegacion.js"></script>
+
 </head>
 <body>
-
-    <header>
-      <div class="container-header">
-        <div class="logo-header">
-          <a href="#">
-            <img class="img-header" src="/assets/img/noimage.png" alt="Logo de Mentaiko" title="Imagen de Mentaiko" />
-          </a>
+    <div id="sidebar">
+        <div id="sidebar-header">
+            <button id="toggle-btn">
+                <span></span>
+            </button>
         </div>
-        <div class="menu-principal-header"> 
-          <nav >
-            <ul class="ul-header">
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#price">Price</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <a href="#" class="btn-started">
-          started
-          </a>
-          <div class="social-media-header">
-            <a href="#"><img class="img-header" src="/assets/img/noimage.png" alt="logos de redes sociales" title="redes"></a>
-            <a href="#"><img class="img-header" src="/assets/img/noimage.png" alt="logos de redes sociales" title="redes"></a>
-            <a href="#"><img class="img-header" src="/assets/img/noimage.png" alt="logos de redes sociales" title="redes"></a>
-          </div>
+        <ul id="sidebar-nav">
+            <li class="activo">
+                <a href="#inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="#perfil">Perfil</a>
+            </li>
+            <li>
+                <a href="#">Mensajes</a>
+            </li>
+            <li>
+                <a href="#">Configuración</a>
+            </li>
+            <li>
+                <a href="#">Ayuda</a>
+            </li>
+        </ul>
+    </div>
+      <header>
+    <div class="container-header">
+      <div class="logo-header">
+        <a href="#">
+          <img class="img-header" src="/assets/img/noimage.png" alt="Logo de Mentaiko" title="Imagen de Mentaiko" />
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-    </header>
 
+      <div class="menu-principal-header">
+        <nav>
+          <ul class="ul-header">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#price">Price</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
+        <a href="#" class="btn-started">Started</a>
 
+        <div class="social-media-header">
+          <a href="#"><img class="img-header" src="/assets/img/noimage.png" alt="logos de redes sociales" title="redes"></a>
+          <a href="#"><img class="img-header" src="/assets/img/noimage.png" alt="logos de redes sociales" title="redes"></a>
+          <a href="#"><img class="img-header" src="/assets/img/noimage.png" alt="logos de redes sociales" title="redes"></a>
+        </div>
+      </div>
+    </div>
+  </header>
     <main>
-
-
       <section id="about">
         <div class="cover">
           <div class="container-text-cover">
             <h1>Mentaiko ayudamos a encontrarte contigo mismo</h1>
-            
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nam, magnam quas voluptatum suscipit vero exercitationem neque dignissimos pariatur voluptatem facere ratione aut nisi cumque recusandae officia modi earum fuga.</p>
-            
             <a href="#" class="btn-text-cover">Started</a>
           </div>
-          
           <div class="image-cover">
-            <img src="assets/img/image-cover.png" alt="">
+            <img src="assets/img/image-cover.png" alt="Imagen de portada" class="img-cover-item" />
           </div>
         </div>
       </section>
-
-      
       <section id="services">
           <div class="header-menu">
             <p>Genera tu Confianza</p>
-            <h2>Horganiza tu rutina en unos cuantos pasos</h2>
+            <h2>Organiza tu rutina en unos cuantos pasos</h2>
           </div>
           <div class="container-cards">
             <div class="card-element">
-                <img src="" alt="imagen">
-                <h3>Onboarding Interactivo</h3>
-                <p>Flujo de bienvenida que recolecta información sobre hábitos, estado emocional y metas del usuario</p>
-                <div class="properties-cards-elements">
-                  <ul>  
-                    <li>Encuesta gamificada de diagnóstico emocional</li>
-                    <li>Selección de objetivos personales</li>
-                    <li>Segmentación automática del perfil</li>
-                  </ul>
-                </div>
+              <img src="" alt="imagen">
+              <h3>Onboarding Interactivo</h3>
+              <p>Flujo de bienvenida que recolecta información sobre hábitos, estado emocional y metas del usuario</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Encuesta gamificada de diagnóstico emocional</li>
+                  <li>Selección de objetivos personales</li>
+                  <li>Segmentación automática del perfil</li>
+                </ul>
+              </div>
             </div>
             <div class="card-element"> 
-                <img src="" alt="imagen">
-                <h3>Panel de Bienestar</h3>
-                <p>FDashboard personalizado que visualiza el estado emocional, hábitos y recomendaciones diarias</p>
-                <div class="properties-cards-elements">
-                  <ul>  
-                    <li>Gráfica de estados emocionales por semana</li>
-                    <li>Recomendaciones de contenido y actividades</li>
-                    <li>Alertas de bienestar y seguimiento de objetivos</li>
-                  </ul>
-                </div>
+              <img src="" alt="imagen">
+              <h3>Panel de Bienestar</h3>
+              <p>Dashboard personalizado que visualiza el estado emocional, hábitos y recomendaciones diarias</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Gráfica de estados emocionales por semana</li>
+                  <li>Recomendaciones de contenido y actividades</li>
+                  <li>Alertas de bienestar y seguimiento de objetivos</li>
+                </ul>
+              </div>
             </div>
             <div class="card-element">
-                <img src="" alt="imagen">
-                <h3>Muro Motivacional</h3>
-                <p>Espacio colaborativo donde los usuarios pueden leer y compartir mensajes motivacionales</p>
-                <div class="properties-cards-elements">
-                  <ul>  
-                    <li>Publicaciones anónimas con moderación automática</li>
-                    <li>Filtro por estado emocional</li>
-                    <li>Reacciones tipo upvote</li>
-                  </ul>
-                </div>
+              <img src="" alt="imagen">
+              <h3>Muro Motivacional</h3>
+              <p>Espacio colaborativo donde los usuarios pueden leer y compartir mensajes motivacionales</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Publicaciones anónimas con moderación automática</li>
+                  <li>Filtro por estado emocional</li>
+                  <li>Reacciones tipo upvote</li>
+                </ul>
+              </div>
             </div>
             <div class="card-element">
-                <img src="" alt="imagen">
-                <h3>Microintervenciones</h3>
-                <p>Sugerencias breves y prácticas para mejorar el estado emocional del usuario durante el día</p>
-                <div class="properties-cards-elements">
-                  <ul>  
-                    <li>Ejercicios de respiración guiada</li>
-                    <li>Rutinas de journaling rápido</li>
-                    <li>Recordatorios de pausas activas</li>
-                  </ul>
-                </div>
+              <img src="" alt="imagen">
+              <h3>Microintervenciones</h3>
+              <p>Sugerencias breves y prácticas para mejorar el estado emocional del usuario durante el día</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Ejercicios de respiración guiada</li>
+                  <li>Rutinas de journaling rápido</li>
+                  <li>Recordatorios de pausas activas</li>
+                </ul>
+              </div>
+            </div>
+          <div class="card-element">
+              <img src="" alt="imagen">
+              <h3>Onboarding Interactivo</h3>
+              <p>Flujo de bienvenida que recolecta información sobre hábitos, estado emocional y metas del usuario</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Encuesta gamificada de diagnóstico emocional</li>
+                  <li>Selección de objetivos personales</li>
+                  <li>Segmentación automática del perfil</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element"> 
+              <img src="" alt="imagen">
+              <h3>Panel de Bienestar</h3>
+              <p>Dashboard personalizado que visualiza el estado emocional, hábitos y recomendaciones diarias</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Gráfica de estados emocionales por semana</li>
+                  <li>Recomendaciones de contenido y actividades</li>
+                  <li>Alertas de bienestar y seguimiento de objetivos</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element">
+              <img src="" alt="imagen">
+              <h3>Muro Motivacional</h3>
+              <p>Espacio colaborativo donde los usuarios pueden leer y compartir mensajes motivacionales</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Publicaciones anónimas con moderación automática</li>
+                  <li>Filtro por estado emocional</li>
+                  <li>Reacciones tipo upvote</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element">
+              <img src="" alt="imagen">
+              <h3>Microintervenciones</h3>
+              <p>Sugerencias breves y prácticas para mejorar el estado emocional del usuario durante el día</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Ejercicios de respiración guiada</li>
+                  <li>Rutinas de journaling rápido</li>
+                  <li>Recordatorios de pausas activas</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element">
+              <img src="" alt="imagen">
+              <h3>Onboarding Interactivo</h3>
+              <p>Flujo de bienvenida que recolecta información sobre hábitos, estado emocional y metas del usuario</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Encuesta gamificada de diagnóstico emocional</li>
+                  <li>Selección de objetivos personales</li>
+                  <li>Segmentación automática del perfil</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element"> 
+              <img src="" alt="imagen">
+              <h3>Panel de Bienestar</h3>
+              <p>Dashboard personalizado que visualiza el estado emocional, hábitos y recomendaciones diarias</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Gráfica de estados emocionales por semana</li>
+                  <li>Recomendaciones de contenido y actividades</li>
+                  <li>Alertas de bienestar y seguimiento de objetivos</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element">
+              <img src="" alt="imagen">
+              <h3>Muro Motivacional</h3>
+              <p>Espacio colaborativo donde los usuarios pueden leer y compartir mensajes motivacionales</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Publicaciones anónimas con moderación automática</li>
+                  <li>Filtro por estado emocional</li>
+                  <li>Reacciones tipo upvote</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-element">
+              <img src="" alt="imagen">
+              <h3>Microintervenciones</h3>
+              <p>Sugerencias breves y prácticas para mejorar el estado emocional del usuario durante el día</p>
+              <div class="properties-cards-elements">
+                <ul>  
+                  <li>Ejercicios de respiración guiada</li>
+                  <li>Rutinas de journaling rápido</li>
+                  <li>Recordatorios de pausas activas</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-      </main>
+    </main>
         <section id="price">
           <div class="container-planes">
             <div class="plan">
@@ -159,29 +279,28 @@
         </section>
 
         <section id="contact">
-          <div class="formulario-contacto">
-            <h2>Contáctanos</h2>
-            <form>
-              <div class="campo">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Tu nombre" required />
-              </div>
-              
-              <div class="campo">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" placeholder="tucorreo@example.com" required />
-              </div>
-              
-              <div class="campo">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-              </div>
-              
-              <button type="submit">Enviar mensaje</button>
-            </form>
-          </div>
-        </section>
-            
+            <div class="formulario-contacto">
+                <h2>Contáctanos</h2>
+                <form id="contactForm">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required />
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" placeholder="tucorreo@example.com" required />
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section> 
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-top">
@@ -227,6 +346,5 @@
       </div>
     </div>
   </footer> 
-
 </body>
 </html>

@@ -1,130 +1,148 @@
-/* .stepper-box {
-  background-color: white;
-  border-radius: 12px;
-  padding: 32px;
-  width: 400px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+#sidebar {
+    width: 0;
+    background: #2c3e50;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s;
+    overflow: hidden;
+    z-index: 100;
+}
+#sidebar.mostrar {
+    width: 250px;
 }
 
-.stepper-step {
-  display: flex;
-  margin-bottom: 32px;
-  position: relative;
+
+#sidebar.mostrar.cerrada {
+    width: 60px;
 }
 
-.stepper-step:last-child {
-  margin-bottom: 0;
+#sidebar.mostrar.cerrada #sidebar-nav span {
+    display: none;
 }
 
-.stepper-line {
-  position: absolute;
-  left: 19px;
-  top: 40px;
-  bottom: -32px;
-  width: 2px;
-  background-color: #e2e8f0;
-  z-index: 1;
+#sidebar.mostrar.cerrada #sidebar-nav li {
+    justify-content: center;
+}
+#sidebar-header {
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid #34495e;
+}
+#toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
 }
 
-.stepper-step:last-child .stepper-line {
-  display: none;
+#toggle-btn::before,
+#toggle-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
 }
 
-.stepper-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 16px;
-  z-index: 2;
+#toggle-btn::before {
+    top: 5px;
 }
 
-.stepper-completed .stepper-circle {
-  background-color: #0f172a;
-  color: white;
+#toggle-btn::after {
+    bottom: 5px;
 }
 
-.stepper-active .stepper-circle {
-  border: 2px solid #0f172a;
-  color: #0f172a;
+#toggle-btn span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background: white;
 }
 
-.stepper-pending .stepper-circle {
-  border: 2px solid #e2e8f0;
-  color: #94a3b8;
+#sidebar:not(.cerrada) #toggle-btn::before {
+    transform: rotate(45deg);
+    top: 11px;
 }
 
-.stepper-content {
-  flex: 1;
+#sidebar:not(.cerrada) #toggle-btn::after {
+    transform: rotate(-45deg);
+    bottom: 11px;
 }
 
-.stepper-title {
-  font-weight: 600;
-  margin-bottom: 4px;
+#sidebar:not(.cerrada) #toggle-btn span {
+    opacity: 0;
+}
+#sidebar-nav {
+    list-style: none;
+}
+#sidebar-nav li {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+}
+#sidebar-nav li:hover {
+    background: #34495e;
 }
 
-.stepper-completed .stepper-title {
-  color: #0f172a;
+.icono {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: white;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
 }
 
-.stepper-active .stepper-title {
-  color: #0f172a;
+#sidebar.cerrada #sidebar-nav span {
+            display: none;
+}
+#sidebar.cerrada #sidebar-nav li {
+    justify-content: center;
+}
+#main-content {
+    margin-left: 200px;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s;
+}
+#sidebar.cerrada + #main-content {
+    margin-left: 60px;
 }
 
-.stepper-pending .stepper-title {
-  color: #94a3b8;
+@keyframes animation{
+  to{
+    translate: calc(-4*250px);
+  }
 }
 
-.stepper-status {
-  font-size: 13px;
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 12px;
-  margin-top: 4px;
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-
-.stepper-completed .stepper-status {
-  background-color: #dcfce7;
-  color: #166534;
-}
-
-.stepper-active .stepper-status {
-  background-color: #dbeafe;
-  color: #1d4ed8;
-}
-
-.stepper-pending .stepper-status {
-  background-color: #f1f5f9;
-  color: #64748b;
-}
-
-.stepper-time {
-  font-size: 12px;
-  color: #94a3b8;
-  margin-top: 4px;
-}
-
-.stepper-controls {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
-}
-
-.stepper-button {
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: 1px solid #e2e8f0;
-  background-color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.stepper-button-primary {
-  background-color: #0f172a;
-  color: white;
-  border-color: #0f172a;
-} */
