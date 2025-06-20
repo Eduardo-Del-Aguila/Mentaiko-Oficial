@@ -12,39 +12,57 @@ body{
   overflow-x: hidden;
 }
 
-
 section{
-      height: 100vh;
       padding: 20px;
       width: 100%;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #862424;
       box-sizing: border-box;
 }
 
-#sidebar-nav li a{
-  list-style: none;
-  color: white;
-}
-
-:root{
-  --color-text-primary: #2CAB29;
-  --color-text-secundary:#1E7C10 ;
-  --color-text-tertiary:#4A7F63;
-  --main-color-primary:#00BF6F;
-  --main-color-secundary:#D4FBF1;
-  --background-color: #E5FBF2;
-  --lowText-font-size:16px; 
-  --text-size-litle: 40px;
-  --text-title-card: 24px;
-  --text-title-cardv2: 20px;
-  --text-paragraph: 16px;
-  --box-shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2)
-}
-
-img{
+/* img{
   width: 30px;
   height: 30px;
+} */
+
+
+:root {
+    --color-text-primary: #2CAB29;
+    --color-text-secundary: #1E7C10;
+    --color-text-tertiary: #4A7F63;
+    --main-color-primary: #00BF6F;
+    --main-color-secundary: #D4FBF1;
+    --background-color: #E5FBF2;
+    --white-color: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray-medium: #E0E0E0;
+    --gray-dark: #777777;
+    
+    --lowText-font-size: 16px; 
+    --text-size-small: 14px;
+    --text-size-medium: 18px;
+    --text-size-large: 24px;
+    --text-size-xlarge: 32px;
+    --text-size-xxlarge: 40px;
+    
+    --text-title-card: 24px;
+    --text-title-cardv2: 20px;
+    --text-paragraph: 16px;
+    
+    --box-shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+    --box-shadow-secondary: 0px 4px 15px rgba(0, 191, 111, 0.15);
+    --border-radius-small: 8px;
+    --border-radius-medium: 12px;
+    --border-radius-large: 16px;
+    
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 40px;
 }
+
+/******************INICIO DEL HEADER****************************/
 
 header {
   width: 100%;
@@ -57,9 +75,8 @@ header {
 }
 
 .container-header{
-  width: 100%;
+  width: 90%;
   display: flex;
-
   justify-content: space-around;  
   margin: auto;
   padding: 10px 20px;
@@ -74,13 +91,18 @@ header {
   align-items: center;
 }
 
-.menu-principal-header{
+.img-header{
+  width: 50px;
+  height: 50px;
+}
+
+.link-header{
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
 }
-.menu-principal-header nav{
+.link-header nav{
   margin: 0px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -120,21 +142,26 @@ header {
   background-color: var(--main-color-primary);
 }
 
+.social-login{
+  display: flex;
+  align-items: center;
+}
+
 .social-media-header{
   margin: 0px 10px;
   display: flex;
+  gap: 10px;
 }
 
-.social-media-header a{
-  margin: 0px 10px;
-}
 
 .social-media-header a img{
-  width: 30px;
+  width: 35px;
+  height: 35px;
 }
+/***************FINAL DEL HEADER************************/
 
-/*Porta inicio*/
-
+/***************INICIO DEL MAIN************************/
+/***************INICIO DEL ABOUT************************/
 
     #about {
       padding: 100px 20px;
@@ -203,101 +230,117 @@ header {
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
       display: block;
     }
-/***********************************************************************/
+/*****************FINAL DEL ABOUT************************/
 
+
+/*************INICIO DE SERVICIOS************************/
+    
 #services {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  gap: 40px;
+  align-items: center;   
+  padding: 60px 20px;
+  background-color: #f5f5f5;
 }
 
-.header-menu {
-  max-width: 700px;
+.header-menu p {
+  font-size: 18px;
+  color: #666;
 }
 
 .header-menu h2 {
-  font-size: 1.8rem;
-  color: var(--color-text-primary);
+  font-size: 28px;
+  margin-top: 10px;
+  color: #222;
 }
 
 .container-cards {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 400px;
-  justify-items: stretch;
-  animation: animation 12s linear infinite;
-}
-.container-cards::-webkit-scrollbar {
-  height: 8px;
-}
-
-.container-cards::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px;
+  margin-top: 40px;
+  justify-items: center;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
-.card-element {
-  scroll-snap-align: center;
-  flex: 0 0 80%;
-  max-width: 350px;
-  min-width: 280px;
-  background-color: white;
-  box-shadow: var(--box-shadow-primary);
+.card-flip {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-flip:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   padding: 20px;
   box-sizing: border-box;
+}
+
+.card-front {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-front h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.card-back {
+  background-color: #f0f0f0;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
-  margin-right: 10px;
 }
 
-.card-element h3 {
-  font-size: var(--text-title-card);
-  color: var(--color-text-secundary);
+.card-back p {
+  font-size: 14px;
   margin-bottom: 10px;
+  color: #222;
 }
 
-.card-element p {
-  font-size: var(--text-paragraph);
-  margin-bottom: 10px;
-}
-
-.properties-cards-elements ul {
+.card-back ul {
   padding-left: 20px;
+  font-size: 13px;
+  color: #444;
 }
-
-.properties-cards-elements ul li {
-  list-style: disc;
-  font-size: 15px;
-  margin-bottom: 6px;
-}
+/****************ACABANDO SRVICIOS*******************/
 
 
-/* MEDIA QUERIES */
-/* @media (min-width: 768px) {
-  .container-cards {
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow-x: hidden;
-  }
-
-  .card-element {
-    flex: 1 1 calc(50% - 40px);
-    margin: 10px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card-element {
-    flex: 1 1 calc(25% - 40px);
-  }
-
-  .header-menu h2 {
-    font-size: 2.2rem;
-  }
-} */
+/****************INICIANDO PAGOS*******************/
 
 .contenedor-pago {
   background-color: white;
@@ -407,8 +450,10 @@ header {
   font-weight: bold;
   border-radius: 6px;
 }
+/**************FINAL DE PAGOS******************/
 
 
+/**************INICIO DE CONTACTOS******************/
 #contact{
   width: 100%;
   display: flex;
@@ -480,7 +525,8 @@ button:hover {
   border-color: #1E7C10;
 }
 
-/************************************************************/
+/**************FINAL DE CONTACTOS******************/
+/**************INICIO DE FOOTER***************/
 .footer {
   background-color: #dddddd;
   color: #333;
@@ -589,6 +635,6 @@ hr {
   filter: grayscale(0%);
 }
 
-
+/***********FINAL DE FOOTER**********/
 
 
