@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi SPA con JS puro</title>
+  <link rel="stylesheet" href="./styles/principal.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <script defer src="principal.js"></script>
+  <script defer src="scripts/activities/Bienvenida.js"></script>
+  <script src="https://kit.fontawesome.com/2478e5791a.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js/minified/introjs.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/intro.js/minified/intro.min.js"></script>
+
+</head>
+<body>
+    <div id="tutorial-popup" class="popup">
+      <div class="popup-content">
+        <p>¿Deseas seguir el tutorial?</p>
+        <button id="btn-si">Sí</button>
+        <button id="btn-no">No</button>
+      </div>
+    </div>
+
+      <header>
+    <div class="container-header">
+      <div class="logo-header">
+        <a href="#">
+          <img class="img-header" src="assets/Icons/Logo_Mentaiko.webp" alt="Logo de Mentaiko" title="Imagen de Mentaiko" />
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="links-header" id="links-header">
+        <nav>
+          <ul class="ul-header">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#price">Price</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="social-login">
+        <a href="/Bienvenida.html" class="btn-started">Started</a>
+        <div class="social-media-header">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+    <main>
+      <section id="about">
+        <div class="cover">
+          <div class="container-text-cover">
+            <h1>Mentaik, ayudamos a encontrarte contigo mismo</h1>
+            <p>En Mentaiko, creemos que el equilibrio digital es esencial para el éxito académico. Nuestra visión es ser la herramienta preferida que ayude a los estudiantes a gestionar su tiempo y emociones de manera efectiva.</p>
+            <a href="/Bienvenida.html" class="btn-text-cover">Started</a>
+          </div>
+          <div class="image-cover">
+            <img src="assets/img/extras/image-cover.png" alt="Imagen de portada" class="img-cover-item" />
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <div class="header-menu">
+          <p>Genera tu Confianza</p>
+          <h2>Organiza tu rutina en unos cuantos pasos</h2>
+        </div>
+        <div class="container-cards">
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/img/Actviidades/Actividad_Horario.jpg" alt="horario">
+                <p>DASHBOARD</p>
+              </div>
+              <a href="dashboard.html" class="card-back">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quibusdam.  necessitatibus quod reprehenderit odio </p>
+                <ul>  
+                  <li>Voluptatum praesentium ea impedit. Minus</li>
+                  <li>alias cupiditate eaque porro fuga, laborum esse reiciendis </li>
+                  <li>sit ratione repellat!</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/img/Actviidades/Actividad_Horario.jpg" alt="horario">
+                <p>Soy un horario</p>
+              </div>
+              <a href="actividades/horario.html" class="card-back">
+                <p>Organiza tu rutina diaria con recordatorios y bloques adaptados a tus hábitos.</p>
+                <ul>  
+                  <li>Calendario editable con tareas y actividades</li>
+                  <li>Notificaciones para mantenerte en ritmo</li>
+                  <li>Integración con tus objetivos personales</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/img/Actviidades/Actividad_foro.webp" alt="foro">
+                <p>Soy un foro</p>
+              </div>
+              <a href="actividades/foro.html" class="card-back">
+                <p>Intercambia ideas, dudas y experiencias con otros usuarios en un espacio seguro.</p>
+                <ul>  
+                  <li>Categorías por temas de interés</li>
+                  <li>Interacciones con comentarios y reacciones</li>
+                  <li>Moderación y reportes activos</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/img/Actviidades/Actividad_Mentiwebp.webp" alt="Mascotita">
+                <p></p>
+              </div>
+              <a href="actividades/menti.html" class="card-back">
+                <p>Tu acompañante emocional virtual que crece contigo a medida que avanzas</p>
+                <ul>  
+                  <li>Responde a tu estado emocional</li>
+                  <li>Desbloquea nuevas animaciones y frases</li>
+                  <li>Refuerza hábitos positivos con recompensas</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/img/Actviidades/Actividad_Micro_Intervenciones.webp" alt="Acá te intervenimos">
+                <p>soy una intervención</p>
+              </div>
+              <a href="actividades/proximamente.html" class="card-back">
+                <p>Organiza tu rutina diaria con recordatorios y bloques adaptados a tus hábitos.</p>
+                <ul>  
+                  <li>Calendario editable con tareas y actividades</li>
+                  <li>Notificaciones para mantenerte en ritmo</li>
+                  <li>Integración con tus objetivos personales</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        
+          <div class="card-flip">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/img/Actviidades/Actividad_Onboarding Interactivo.webp" alt="foro">
+                <p>Soy un onboarding</p>
+              </div>
+              <a href="actividades/proximamente.html" class="card-back">
+                <p>Intercambia ideas, dudas y experiencias con otros usuarios en un espacio seguro.</p>
+                <ul>  
+                  <li>Categorías por temas de interés</li>
+                  <li>Interacciones con comentarios y reacciones</li>
+                  <li>Moderación y reportes activos</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+      </section>
+
+    </main>
+        <section id="price">
+          <div class="container-planes">
+            <div class="plan">
+              <h3>Gratis</h3>
+              <p class="precio">$0 <span>/mes</span></p>
+              <p>Ideal para comenzar a explorar</p>
+              <ul>
+                <li>Acceso básico</li>
+                <li>Funciones limitadas</li>
+                <li>Soporte por email</li>
+                </ul>
+                <button disabled>Tu plan actual</button>
+              </div>
+              <div class="plan destacado">
+                <div class="etiqueta">POPULAR</div>
+                <h3>Plus</h3>
+                <p class="precio">$4 <span>/mes</span></p>
+                <p>Ideal para usuarios frecuentes</p>
+              <ul>
+                <li>Acceso completo</li>
+                <li>Funciones premium</li>
+                <li>Soporte rápido</li>
+              </ul>
+              <button class="btn-verde">Obtener Plus</button>
+            </div>
+          
+            <div class="plan">
+              <h3>Pro</h3>
+              <p class="precio">$20 <span>/mes</span></p>
+              <p>Ideal para profesionales y empresas</p>
+              <ul>
+                <li>Acceso total sin límites</li>
+                <li>Soporte dedicado</li>
+                <li>Integración avanzada</li>
+              </ul>
+              <button class="btn-negro">Obtener Pro</button>
+            </div>
+          </div>
+        </section>
+        <section id="contact-section">
+          <div class="contact-container">
+            <div class="contact-form">
+              <h2><span>Contáctanos en</span> Mentaiko</h2>
+              <p class="required-msg">Todos los campos con <span>*</span> son obligatorios</p>
+              <form id="formulario-contacto">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Nombres*</label>
+                    <input type="text" name="nombres" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Celular *</label>
+                    <input type="tel" name="celular" required>
+                  </div>
+                </div>
+                <div class="form-group full-width">
+                  <label>Mensaje *</label>
+                  <textarea name="mensaje" rows="4" required></textarea>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" name="email" required>
+                  </div>
+                  <button type="submit" class="btn-submit">ENVIAR CORREO</button>
+                </div>
+              </form>
+            </div>
+          <div class="separator-line"></div>
+
+          <div class="contact-info">
+            <p class="social-title">Nuestras redes:</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          
+            <p class="contact-fast">Contáctanos por:</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          
+            <p class="email-text">Email:</p>
+            <a href="mailto:info@mentaiko.com" class="email-link">
+              <i class="fas fa-envelope"></i> info@mentaiko.com
+            </a>
+          
+            <div class="mini-card">
+              <img src="assets/img/Actviidades/MENTI.webp" alt="Mascota Mentaiko">
+              <div>
+                <h4>Mentaiko Bot</h4>
+                <p>Tu guía emocional personal</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a href="https://flowbite.com/" class="brand-link">
+                <img src="assets/Icons/Logo_Mentaiko.webp" alt="Menti" class="brand-logo"/>
+                <span class="brand-name">Mentaiko</span>
+              </a>
+            </div>
+            <div class="footer-links">
+              <div class="footer-column">
+                <h2>Resources</h2>
+                <ul>
+                  <li><a href="#">HTML</a></li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h2>Donde nos ubicamos</h2>
+                <ul>
+                  <li><a href="https://github.com/Eduardo-Del-Aguila">Github</a></li>
+                  <li><a href="https://discord.gg/4eeurUVvTy">Discord</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h2>Legal</h2>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="footer-bottom">
+            <span>© 2023 Mentaiko</a>. All Rights Reserved.</span>
+            <div class="footer-socials">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/eduardo-del-aguila-723988274/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/Eduardo-Del-Aguila"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer> 
+</body>
+</html>
+
+
+          

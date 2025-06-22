@@ -1,0 +1,33 @@
+{
+  "name": "mentaikobasico",
+  "version": "1.0.0",
+  "description": "Aplicación web Mentaiko Básico",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduardo-Del-Aguila/MentaikoBasico.git"
+  },
+  "keywords": [
+    "webapp",
+    "education",
+    "mentaiko"
+  ],
+  "author": "Eduardo Del Águila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduardo-Del-Aguila/MentaikoBasico/issues"
+  },
+  "homepage": "https://github.com/Eduardo-Del-Aguila/MentaikoBasico#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
