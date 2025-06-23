@@ -12,7 +12,6 @@
 
 
 
-//Este es el popup, agregar más camino del tutorial, mostrando las secciones, mostrando varias cosas
 window.addEventListener("DOMContentLoaded", () => {
 
   const popup = document.getElementById("tutorial-popup");
@@ -20,13 +19,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const btnNo = document.getElementById("btn-no");
 
   const tutorialRespondido = localStorage.getItem("tutorialRespondido");
-  console.log("Respondido:", tutorialRespondido); // Para verificar
+  console.log("Respondido:", tutorialRespondido); 
   localStorage.removeItem("tutorialRespondido")
-  // 👉 Mostrar popup si es la primera vez
+
   if (!tutorialRespondido) {
     popup.style.display = "flex";
   }
-  
+
     btnSi.addEventListener("click", () => {;
         popup.style.display = "none";
         localStorage.setItem("tutorialRespondido", "si");
@@ -38,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
       intro: "👋 Bienvenido a <strong>Mentaiko</strong>. Aquí comienza tu camino hacia una mejor salud mental."
     },
     {
-      element: document.querySelector('.btn-started'),
+      element: document.querySelector('.btn-text-cover'),
       intro: "💡 Haz clic en <strong>Started</strong> para realizar tu test emocional personalizado."
     },
     {
@@ -104,32 +103,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 //Validamos el formulario
-const miContacto = document.getElementById('formulario-contacto')
-    miContacto.addEventListener('submit', async (e) => {
-    e.preventDefault(); 
+document.addEventListener("DOMContentLoaded", () => {
+  const miContacto = document.getElementById('formulario-contacto');
+
+  miContacto.addEventListener('submit', (e) => {
+    e.preventDefault(); // Evita el envío real
 
     const form = e.target;
     const datos = {
-        nombres: form.nombres.value,
-        celular: form.celular.value,
-        mensaje: form.mensaje.value,
-        email: form.email.value
+      nombres: form.nombres.value,
+      celular: form.celular.value,
+      mensaje: form.mensaje.value,
+      email: form.email.value
     };
-    
-    try {
-        const respuesta = await fetch('/api/contacto', {
-            method: 'POST',
-            headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(datos)
-        });
 
-    const resultado = await respuesta.text();
-    alert(resultado); // Mostrar mensaje del backend
-    } catch (error) {
-    console.error('Error al enviar el formulario:', error);
-    }
+    alert(`¡Gracias ${datos.nombres}! Hemos recibido tu mensaje y te responderemos pronto a ${datos.email}.`);
 
-    
+    form.reset();
+  });
 });
+
+const mensajeExito = document.getElementById('mensaje-confirmacion');
+mensajeExito.style.display = 'block';
+form.reset();
+setTimeout(() => {
+  mensajeExito.style.display = 'none';
+}, 5000);
+

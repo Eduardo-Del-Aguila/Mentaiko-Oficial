@@ -2,6 +2,8 @@
 body{
   height: 100vh;
   overflow: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 .pantalla-inicial {
   min-height: 100vh;

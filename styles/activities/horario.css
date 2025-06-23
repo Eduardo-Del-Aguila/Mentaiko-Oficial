@@ -35,7 +35,7 @@
     --spacing-xxl: 40px;
 }
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       background: var(--background-color);
       margin: 0;
       padding: 0;
