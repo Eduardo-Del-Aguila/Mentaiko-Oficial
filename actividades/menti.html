@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menti</title>
+  <link rel="stylesheet" href="../styles/activities/menti.css" />
+  <script defer src="../scripts/activities/menti.js"></script>
+</head>
+<body>
+  <section class="mascota-section">
+    <div class="top-bar">
+      <img src="../assets/img/Actviidades/Logo_mentaiko_sin_fondeo.png" alt="Logo Mentaiko" class="logo-mentaiko">
+      <div class="nivel-container">
+        <p class="nivel-texto">Nivel 5</p>
+      </div>
+    </div>
+
+    <div>
+      <h2>Tu mascota Menti</h2>
+      <p>¿Qué te gustaría preguntarle hoy?</p>
+    </div>
+
+    <div class="mascota-layout">
+      <div class="medidor-animo">
+        <label for="animo">ÁNIMO</label>
+        <div class="barra-animo">
+          <div class="relleno-animo" style="height: 70%;"></div> 
+        </div>
+      </div>
+
+      <div class="mascota-container">
+        <img src="../assets/img/Actviidades/Menti_pet.png" alt="Mascota virtual" class="mascota-img">
+      </div>
+    </div>
+  </section>
+  
+<div class="menti-toggle" onclick="toggleChatMenti()">
+  💬
+</div>
+
+<div class="menti-chat-widget" id="mentiChat">
+  <header class="chat-menti-header">
+    <img src="../assets/img/Actviidades/Menti_pet.png" alt="Mascota Menti" class="chat-menti-avatar" />
+    <div class="chat-menti-info">
+      <span class="chat-menti-title">Menti</span>
+      <span class="chat-menti-subtitle">¿En qué te ayudo?</span>
+    </div>
+    <button class="cerrar-chat" onclick="toggleChatMenti()">✖</button>
+  </header>
+
+  <main class="chat-menti-body" id="chat-body">
+    <div class="chat-msg bot">¡Hola! Soy Menti 🧠 ¿Qué te gustaría saber?</div>
+  </main>
+
+  <footer class="chat-menti-input">
+    <input type="text" id="input-mensaje" placeholder="Pregúntame algo..." />
+    <button onclick="enviarMensaje()">Enviar</button>
+  </footer>
+</div>
+
+</body>
+
+</body>
+</html>

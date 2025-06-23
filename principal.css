@@ -61,7 +61,7 @@ section{
   --gray-dark: #777777;
 
   --lightcyan: #00FFDE;
-  --lightgreen: 67AE6E; 
+  --lightgreen: #67AE6E; 
 
   --lowText-font-size: 16px;
   --text-size-small: 14px;
@@ -120,8 +120,8 @@ header {
 }
 
 .img-header{
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
 }
 
 .link-header{

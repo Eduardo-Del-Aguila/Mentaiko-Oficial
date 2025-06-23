@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../scripts/activities/dashboard.js"></script>
+    <link rel="stylesheet" href="../styles/activities/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Mejorar esta seccion para que se vea mejor(quizas añadir una barra lateral) -->
+    <!-- Hacer responsive todo esto -->
+    <header>
+        <h2>DASHBOARD</h2>
+        <p>Enterate de lo que piensan las demás personas</p>
+    </header>
+    
+    <div id="dashboard">
+            <div class="card">
+                <h2>Top 3 elecciones más frecuentes</h2>
+                <ul id="top-elecciones"></ul>
+            </div>
+
+            <div class="card">
+                <h2>Gráfico: Elecciones por Categoría</h2>
+                <canvas id="graficoCategorias" width="400" height="200"></canvas>
+            </div>
+    
+            <div class="card">
+                <h2>Gráfico: Top 3 Elecciones</h2>
+                <canvas id="graficoTop" width="400" height="200"></canvas>
+            </div>
+            <div class="card">
+                <h2>Tabla de respuestas</h2>
+                <table id="tabla-respuestas">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Respuestas</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                </table>
+
+            </div>
+        </div>
+
+        
+</body>
+</html>

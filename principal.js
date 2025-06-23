@@ -8,6 +8,101 @@
         });
     });
 
+
+
+
+
+//Este es el popup, agregar más camino del tutorial, mostrando las secciones, mostrando varias cosas
+window.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("tutorial-popup");
+  const btnSi = document.getElementById("btn-si");
+  const btnNo = document.getElementById("btn-no");
+
+  const tutorialRespondido = localStorage.getItem("tutorialRespondido");
+  console.log("Respondido:", tutorialRespondido); // Para verificar
+  localStorage.removeItem("tutorialRespondido")
+  // 👉 Mostrar popup si es la primera vez
+  if (!tutorialRespondido) {
+    popup.style.display = "flex";
+  }
+  
+    btnSi.addEventListener("click", () => {;
+        popup.style.display = "none";
+        localStorage.setItem("tutorialRespondido", "si");
+
+        introJs().setOptions({
+            steps: [
+    {
+      element: document.querySelector('#about'),
+      intro: "👋 Bienvenido a <strong>Mentaiko</strong>. Aquí comienza tu camino hacia una mejor salud mental."
+    },
+    {
+      element: document.querySelector('.btn-started'),
+      intro: "💡 Haz clic en <strong>Started</strong> para realizar tu test emocional personalizado."
+    },
+    {
+      element: document.querySelector("#services"),
+      intro: "🛠️ Estas son las funciones clave que te ayudarán a organizarte y sentirte mejor cada día."
+    },
+    {
+      element: document.querySelectorAll('.card-flip')[0], // DASHBOARD
+      intro: "📊 El <strong>Dashboard</strong> te permite visualizar tu progreso y acceder a métricas emocionales."
+    },
+    {
+      element: document.querySelectorAll('.card-flip')[1], // HORARIO
+      intro: "🕒 En <strong>Horario</strong> puedes estructurar tu día y crear hábitos saludables con recordatorios."
+    },
+    {
+      element: document.querySelectorAll('.card-flip')[2], // FORO
+      intro: "💬 <strong>Foro</strong> es tu espacio seguro para compartir, consultar y aprender con otros usuarios."
+    },
+    {
+      element: document.querySelectorAll('.card-flip')[3], // MENTI
+      intro: "🐾 <strong>Menti</strong> es tu acompañante emocional que te da soporte y crece contigo."
+    },
+    {
+      element: document.querySelector("#price"),
+      intro: "💸 Aquí puedes consultar los planes disponibles según tu nivel de uso."
+    },
+    {
+      element: document.querySelectorAll('.plan')[0], // Plan Gratis
+      intro: "🎁 <strong>Plan Gratis</strong>: Ideal para comenzar a explorar con acceso limitado pero funcional."
+    },
+    {
+      element: document.querySelectorAll('.plan')[1], // Plan Plus
+      intro: "🌟 <strong>Plan Plus</strong>: Recomendado para estudiantes con acceso completo y soporte rápido."
+    },
+    {
+      element: document.querySelectorAll('.plan')[2], // Plan Pro
+      intro: "🚀 <strong>Plan Pro</strong>: Para profesionales y equipos que buscan personalización avanzada y asistencia 24/7."
+    },
+    {
+      element: document.querySelector("#contact-section"),
+      intro: "📬 Si necesitas ayuda, aquí puedes dejarnos un mensaje o escribirnos por redes."
+    },
+    {
+      element: document.querySelector("footer"),
+      intro: "🌐 En el pie de página encontrarás nuestros enlaces útiles, redes sociales y recursos legales."
+    }
+
+            ],
+            overlayOpacity: 0.6,
+            nextLabel: "Siguiente",
+            prevLabel: "Anterior",
+            doneLabel: "Entendido",
+            showStepNumbers: false
+        }).start();
+    });
+
+  btnNo.addEventListener("click", () => {
+      popup.style.display = "none";
+      // localStorage.setItem("tutorialRespondido", "no");
+  });
+    
+});
+
+
 //Validamos el formulario
 const miContacto = document.getElementById('formulario-contacto')
     miContacto.addEventListener('submit', async (e) => {
@@ -35,51 +130,6 @@ const miContacto = document.getElementById('formulario-contacto')
     } catch (error) {
     console.error('Error al enviar el formulario:', error);
     }
-});
 
-//Este es el popup, agregar más camino del tutorial, mostrando las secciones, mostrando varias cosas
-window.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("tutorial-popup");
-    const btnSi = document.getElementById("btn-si");
-    const btnNo = document.getElementById("btn-no");
-
-    popup.style.display = "flex";
-
-    btnSi.addEventListener("click", () => {
-        popup.style.display = "none";
-
-        introJs().setOptions({
-            steps: [
-                {
-                    element: document.querySelector('#about'),
-                    intro: "Estos somos nosotos hermano"
-                },
-                {
-                    element: document.querySelector("#services"),
-                    intro: "Aquí puedes ver nuestros servicios disponibles."
-                },
-                {
-                    element: document.querySelector('#price'),
-                    intro: "Estos son nuestro planes"
-                },
-                {
-                    element: document.querySelector("#contact-section"),
-                    intro: "Este es nuestro formulario de contacto."
-                },
-                {
-                    element: document.querySelector("footer"),
-                    intro: "Aquí están nuestras redes sociales."
-                }
-                ],
-                overlayOpacity: 0.6,
-                nextLabel: "Siguiente",
-                prevLabel: "Anterior",
-                doneLabel: "Entendido",
-                showStepNumbers: false
-            }).start();
-    });
-
-    btnNo.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
+    
 });

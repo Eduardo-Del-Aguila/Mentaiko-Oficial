@@ -1,0 +1,381 @@
+:root {
+    --color-text-primary: #2CAB29;
+    --color-text-secundary: #1E7C10;
+    --color-text-tertiary: #4A7F63;
+    --main-color-primary: #00BF6F;
+    --main-color-secundary: #D4FBF1;
+    --background-color: #E5FBF2;
+    --white-color: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray-medium: #E0E0E0;
+    --gray-dark: #777777;
+    
+    --lowText-font-size: 16px; 
+    --text-size-small: 14px;
+    --text-size-medium: 18px;
+    --text-size-large: 24px;
+    --text-size-xlarge: 32px;
+    --text-size-xxlarge: 40px;
+    
+    --text-title-card: 24px;
+    --text-title-cardv2: 20px;
+    --text-paragraph: 16px;
+    
+    --box-shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+    --box-shadow-secondary: 0px 4px 15px rgba(0, 191, 111, 0.15);
+    --border-radius-small: 8px;
+    --border-radius-medium: 12px;
+    --border-radius-large: 16px;
+    
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 40px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor principal que ocupa toda la pantalla */
+.mascota-section {
+  width: 100%;
+  max-width: 1100px;
+  height: 90vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow-primary);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Encabezado */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-mentaiko {
+  height: 40px;
+}
+
+.nivel-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.nivel-img {
+  width: 80px;
+}
+
+.nivel-texto {
+  font-weight: bold;
+  color: var(--gray-dark);
+  font-size: var(--text-size-medium);
+}
+
+/* Título y subtítulo */
+h2 {
+  font-size: var(--text-size-xlarge);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+p {
+  margin: var(--spacing-xs) 0 var(--spacing-md);
+  color: var(--gray-dark);
+  font-size: var(--text-paragraph);
+}
+
+/* Cuerpo central */
+.mascota-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xxl);
+  flex-grow: 1;
+}
+
+/* Medidor vertical */
+.medidor-animo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: var(--text-size-small);
+  color: var(--gray-dark);
+}
+
+.barra-animo {
+  width: 25px;
+  height: 150px;
+  background-color: var(--gray-medium);
+  border-radius: var(--border-radius-medium);
+  margin-top: var(--spacing-xs);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-secondary);
+}
+
+.relleno-animo {
+  background-color: #6874FF;
+  width: 100%;
+  border-radius: var(--border-radius-medium);
+  transition: height 0.3s ease;
+}
+
+/* Imagen de la mascota */
+.mascota-img {
+  width: 180px;
+  height: auto;
+}
+
+
+/* chat de menti */
+
+.chat-menti-container {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chat-menti-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background-color: var(--main-color-secundary);
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.chat-menti-avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.chat-menti-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chat-menti-title {
+  font-weight: bold;
+  font-size: var(--text-size-medium);
+  color: var(--color-text-primary);
+}
+
+.chat-menti-subtitle {
+  font-size: var(--text-size-small);
+  color: var(--gray-dark);
+}
+
+.chat-menti-body {
+  flex: 1;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.chat-msg {
+  max-width: 80%;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--text-paragraph);
+  line-height: 1.4;
+}
+
+.chat-msg.bot {
+  background-color: var(--main-color-secundary);
+  color: var(--color-text-secundary);
+  align-self: flex-start;
+}
+
+.chat-msg.usuario {
+  background-color: var(--main-color-primary);
+  color: var(--white-color);
+  align-self: flex-end;
+}
+
+.chat-menti-input {
+  display: flex;
+  padding: var(--spacing-sm);
+  border-top: 1px solid var(--gray-medium);
+  background-color: var(--gray-light);
+}
+
+.chat-menti-input input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-size: var(--text-size-small);
+}
+
+.chat-menti-input button {
+  background-color: var(--main-color-primary);
+  color: var(--white-color);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-left: var(--spacing-sm);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+}
+
+
+/* Botón flotante */
+.menti-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--main-color-primary);
+  color: var(--white-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadow-primary);
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Widget de chat */
+.menti-chat-widget {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 360px;
+  height: 480px;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  display: none; /* Oculto por defecto */
+  z-index: 998;
+}
+
+/* Encabezado */
+.chat-menti-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background-color: var(--main-color-secundary);
+}
+
+.chat-menti-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.chat-menti-info {
+  flex-grow: 1;
+  margin-left: var(--spacing-sm);
+  text-align: left;
+}
+
+.chat-menti-title {
+  font-weight: bold;
+  color: var(--color-text-primary);
+  font-size: var(--text-size-medium);
+}
+
+.chat-menti-subtitle {
+  font-size: var(--text-size-small);
+  color: var(--gray-dark);
+}
+
+/* Botón cerrar */
+.cerrar-chat {
+  background: none;
+  border: none;
+  color: var(--gray-dark);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Cuerpo del chat */
+.chat-menti-body {
+  flex: 1;
+  padding: var(--spacing-sm);
+  overflow-y: auto;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.chat-msg {
+  max-width: 80%;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--text-paragraph);
+  line-height: 1.4;
+}
+
+.chat-msg.bot {
+  background-color: var(--main-color-secundary);
+  color: var(--color-text-secundary);
+  align-self: flex-start;
+}
+
+.chat-msg.usuario {
+  background-color: var(--main-color-primary);
+  color: var(--white-color);
+  align-self: flex-end;
+}
+
+/* Pie de entrada */
+.chat-menti-input {
+  display: flex;
+  padding: var(--spacing-sm);
+  background-color: var(--gray-light);
+  border-top: 1px solid var(--gray-medium);
+}
+
+.chat-menti-input input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  font-size: var(--text-size-small);
+  border: none;
+  border-radius: var(--border-radius-small);
+}
+
+.chat-menti-input button {
+  background-color: var(--main-color-primary);
+  color: var(--white-color);
+  border: none;
+  margin-left: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+}
+
+/* menu flotante */

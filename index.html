@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi SPA con JS puro</title>
   <link rel="stylesheet" href="principal.css" />
-  <link rel="stylesheet" href="public/styles/animations.css" />
-  <link rel="stylesheet" href="public/styles/responsive.css">
+  <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/responsive.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js/minified/introjs.min.css">
   <script defer src="principal.js"></script>
-  <script defer src="public/scripts/activities/Bienvenida.js"></script>
+  <script defer src="scripts/activities/Bienvenida.js"></script>
   <script src="https://kit.fontawesome.com/2478e5791a.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/intro.js/minified/intro.min.js"></script>
 
 
 </head>
 <body>
-    <div id="tutorial-popup" class="popup">
+  <div id="tutorial-popup" class="popup" style="display: none;">
       <div class="popup-content">
         <p>¿Deseas seguir el tutorial?</p>
         <button id="btn-si">Sí</button>
@@ -28,7 +28,7 @@
     <div class="container-header">
       <div class="logo-header">
         <a href="#">
-          <img class="img-header" src="assets/Icons/Logo_Mentaiko.webp" alt="Logo de Mentaiko" title="Imagen de Mentaiko" />
+          <img class="img-header" src="assets/img/Actviidades/Logo_mentaiko_sin_fondeo.png" alt="Logo de Mentaiko" title="Imagen de Mentaiko" />
         </a>
         <div class="menu-toggle" id="menu-toggle">
           <span></span>
@@ -46,7 +46,7 @@
         </nav>
       </div>
       <div class="social-login">
-        <a href="/Bienvenida.html" class="btn-started">Started</a>
+        <a href="actividades/Bienvenida.html" class="btn-started">Started</a>
         <div class="social-media-header">
           <i class="fa-brands fa-facebook"></i>
           <i class="fa-brands fa-github"></i>
@@ -57,30 +57,31 @@
   </header>
     <main>
       <section id="about">
-        <div class="cover">
-          <div class="container-text-cover">
-            <h1>Mentaik, ayudamos a encontrarte contigo mismo</h1>
-            <p>En Mentaiko, creemos que el equilibrio digital es esencial para el éxito académico. Nuestra visión es ser la herramienta preferida que ayude a los estudiantes a gestionar su tiempo y emociones de manera efectiva.</p>
-            <a href="/Bienvenida.html" class="btn-text-cover">Started</a>
+          <div class="cover">
+            <div class="container-text-cover">
+              <h1>Mentaiko: reconecta contigo mismo</h1>
+              <p>En un mundo lleno de distracciones, Mentaiko nace para ayudarte a encontrar equilibrio y claridad. Diseñada especialmente para estudiantes, nuestra app te acompaña a organizar tu tiempo, gestionar tus emociones y priorizar tu bienestar mental. Porque cuando estás bien contigo mismo, todo fluye mejor.</p>
+              <a href="actividades/Bienvenida.html" class="btn-text-cover">Comienza ahora</a>
+            </div>
+            <div class="image-cover">
+              <img src="assets/img/extras/image-cover.png" alt="Imagen de portada" class="img-cover-item" />
+            </div>
           </div>
-          <div class="image-cover">
-            <img src="assets/img/extras/image-cover.png" alt="Imagen de portada" class="img-cover-item" />
-          </div>
-        </div>
       </section>
       <section id="services">
         <div class="header-menu">
-          <p>Genera tu Confianza</p>
-          <h2>Organiza tu rutina en unos cuantos pasos</h2>
+          <p>Recupera el control de tu tiempo y tu bienestar</p>
+          <h2>Transforma tu rutina en pequeños pasos con Mentaiko</h2>
         </div>
+
         <div class="container-cards">
           <div class="card-flip">
             <div class="card-inner">
               <div class="card-front">
-                <img src="assets/img/Actviidades/Actividad_Horario.jpg" alt="horario">
+                <img src="assets/img/servicios/dashboard.png" alt="horario">
                 <p>DASHBOARD</p>
               </div>
-              <a href="dashboard.html" class="card-back">
+              <a href="actividades/dashboard.html" class="card-back">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, quibusdam.  necessitatibus quod reprehenderit odio </p>
                 <ul>  
                   <li>Voluptatum praesentium ea impedit. Minus</li>
@@ -94,8 +95,8 @@
           <div class="card-flip">
             <div class="card-inner">
               <div class="card-front">
-                <img src="assets/img/Actviidades/Actividad_Horario.jpg" alt="horario">
-                <p>Soy un horario</p>
+                <img src="assets/img/servicios/horario.png" alt="horario">
+                <p>HORARIO</p>
               </div>
               <a href="actividades/horario.html" class="card-back">
                 <p>Organiza tu rutina diaria con recordatorios y bloques adaptados a tus hábitos.</p>
@@ -111,10 +112,10 @@
           <div class="card-flip">
             <div class="card-inner">
               <div class="card-front">
-                <img src="assets/img/Actviidades/Actividad_foro.webp" alt="foro">
-                <p>Soy un foro</p>
+                <img src="assets/img/servicios/foros.png" alt="foro">
+                <p>FORO</p>
               </div>
-              <a href="actividades/foro.html" class="card-back">
+              <a href="actividades/proximamente.html" class="card-back">
                 <p>Intercambia ideas, dudas y experiencias con otros usuarios en un espacio seguro.</p>
                 <ul>  
                   <li>Categorías por temas de interés</li>
@@ -128,8 +129,8 @@
           <div class="card-flip">
             <div class="card-inner">
               <div class="card-front">
-                <img src="assets/img/Actviidades/Actividad_Mentiwebp.webp" alt="Mascotita">
-                <p></p>
+                <img src="assets/img/servicios/mascota_menti.png" alt="Mascotita">
+                <p>MENTI</p>
               </div>
               <a href="actividades/menti.html" class="card-back">
                 <p>Tu acompañante emocional virtual que crece contigo a medida que avanzas</p>
@@ -144,8 +145,8 @@
         <div class="card-flip">
             <div class="card-inner">
               <div class="card-front">
-                <img src="assets/img/Actviidades/Actividad_Micro_Intervenciones.webp" alt="Acá te intervenimos">
-                <p>soy una intervención</p>
+                <img src="assets/img/servicios/intervencion.png" alt="Acá te intervenimos">
+                <p>INTERVENCION</p>
               </div>
               <a href="actividades/proximamente.html" class="card-back">
                 <p>Organiza tu rutina diaria con recordatorios y bloques adaptados a tus hábitos.</p>
@@ -161,8 +162,8 @@
           <div class="card-flip">
             <div class="card-inner">
               <div class="card-front">
-                <img src="assets/img/Actviidades/Actividad_Onboarding Interactivo.webp" alt="foro">
-                <p>Soy un onboarding</p>
+                <img src="assets/img/servicios/onboarding.png" alt="foro">
+                <p>ONBOARDING</p>
               </div>
               <a href="actividades/proximamente.html" class="card-back">
                 <p>Intercambia ideas, dudas y experiencias con otros usuarios en un espacio seguro.</p>
@@ -177,45 +178,59 @@
       </section>
 
     </main>
-        <section id="price">
-          <div class="container-planes">
-            <div class="plan">
-              <h3>Gratis</h3>
-              <p class="precio">$0 <span>/mes</span></p>
-              <p>Ideal para comenzar a explorar</p>
-              <ul>
-                <li>Acceso básico</li>
-                <li>Funciones limitadas</li>
-                <li>Soporte por email</li>
-                </ul>
-                <button disabled>Tu plan actual</button>
-              </div>
-              <div class="plan destacado">
-                <div class="etiqueta">POPULAR</div>
-                <h3>Plus</h3>
-                <p class="precio">$4 <span>/mes</span></p>
-                <p>Ideal para usuarios frecuentes</p>
-              <ul>
-                <li>Acceso completo</li>
-                <li>Funciones premium</li>
-                <li>Soporte rápido</li>
-              </ul>
-              <button class="btn-verde">Obtener Plus</button>
-            </div>
-          
-            <div class="plan">
-              <h3>Pro</h3>
-              <p class="precio">$20 <span>/mes</span></p>
-              <p>Ideal para profesionales y empresas</p>
-              <ul>
-                <li>Acceso total sin límites</li>
-                <li>Soporte dedicado</li>
-                <li>Integración avanzada</li>
-              </ul>
-              <button class="btn-negro">Obtener Pro</button>
-            </div>
-          </div>
-        </section>
+       <section id="price">
+  <div class="container-planes">
+    
+    <!-- Plan Gratis -->
+    <div class="plan">
+      <h3>Gratis</h3>
+      <p class="precio">$0 <span>/mes</span></p>
+      <p>Ideal para empezar sin compromiso</p>
+      <ul>
+        <li>Acceso básico a funciones esenciales</li>
+        <li>Explora contenido limitado</li>
+        <li>1 actividad personalizada por semana</li>
+        <li>Historial no guardado</li>
+        <li>Soporte por email en 72h</li>
+      </ul>
+      <button disabled>Tu plan actual</button>
+    </div>
+
+    <!-- Plan Plus (común) -->
+    <div class="plan destacado">
+      <div class="etiqueta">POPULAR</div>
+      <h3>Plus</h3>
+      <p class="precio">$4 <span>/mes</span></p>
+      <p>Perfecto para estudiantes y usuarios activos</p>
+      <ul>
+        <li>Acceso completo a todas las funciones</li>
+        <li>Historial ilimitado y personalizado</li>
+        <li>Actividades interactivas semanales</li>
+        <li>Modo oscuro + temas visuales</li>
+        <li>Soporte prioritario (48h)</li>
+      </ul>
+      <button class="btn-verde">Obtener Plus</button>
+    </div>
+
+    <!-- Plan Pro (VIP) -->
+    <div class="plan">
+      <h3>Pro</h3>
+      <p class="precio">$20 <span>/mes</span></p>
+      <p>Para profesionales, equipos o heavy users</p>
+      <ul>
+        <li>Acceso total sin restricciones</li>
+        <li>Actividades y dashboards personalizados con IA</li>
+        <li>Integración con apps externas (Notion, Google)</li>
+        <li>Modo colaborativo para equipos</li>
+        <li>Soporte dedicado 24/7 por chat</li>
+        <li>Acceso anticipado a nuevas funciones</li>
+      </ul>
+      <button class="btn-negro">Obtener Pro</button>
+    </div>
+
+  </div>
+</section>
+
         <section id="contact-section">
           <div class="contact-container">
             <div class="contact-form">
@@ -279,8 +294,8 @@
         <div class="footer-container">
           <div class="footer-top">
             <div class="footer-brand">
-              <a href="https://flowbite.com/" class="brand-link">
-                <img src="assets/Icons/Logo_Mentaiko.webp" alt="Menti" class="brand-logo"/>
+              <a href="#" class="brand-link">
+                <img src="assets/img/Actviidades/Logo_mentaiko_sin_fondeo.png" alt="Menti" class="brand-logo"/>
                 <span class="brand-name">Mentaiko</span>
               </a>
             </div>

@@ -1,0 +1,137 @@
+:root {
+    --color-text-primary: #2CAB29;
+    --color-text-secundary: #1E7C10;
+    --color-text-tertiary: #4A7F63;
+    --main-color-primary: #00BF6F;
+    --main-color-secundary: #D4FBF1;
+    --background-color: #E5FBF2;
+    --white-color: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray-medium: #E0E0E0;
+    --gray-dark: #777777;
+    
+    --lowText-font-size: 16px; 
+    --text-size-small: 14px;
+    --text-size-medium: 18px;
+    --text-size-large: 24px;
+    --text-size-xlarge: 32px;
+    --text-size-xxlarge: 40px;
+    
+    --text-title-card: 24px;
+    --text-title-cardv2: 20px;
+    --text-paragraph: 16px;
+    
+    --box-shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+    --box-shadow-secondary: 0px 4px 15px rgba(0, 191, 111, 0.15);
+    --border-radius-small: 8px;
+    --border-radius-medium: 12px;
+    --border-radius-large: 16px;
+    
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 40px;
+}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+.btn-regresar {
+  display: inline-block;
+  margin: 20px 0 10px 30px;
+  padding: 10px 20px;
+  background-color: var(--main-color-secundary);
+  color: var(--main-color-primary);
+  font-weight: bold;
+  border: 2px solid var(--main-color-primary);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-regresar:hover {
+  background-color: var(--main-color-primary);
+  color: white;
+}
+
+
+    h2 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      color: var(--main-color-primary);
+      text-align: center;
+    }
+
+    .contenedor-horario {
+      margin: 40px auto;
+      width: 95%;
+      max-width: 1100px;
+      background: var(--white-color);
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+    }
+
+    table.horario-editable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    table th, table td {
+      border: 1px solid var(--gray-medium);
+      padding: 10px;
+      text-align: center;
+    }
+
+    table thead {
+      background-color: var(--main-color-primary);
+      color: var(--white-color);
+    }
+
+    .input-horario {
+      width: 95%;
+      padding: 6px;
+      font-size: 1em;
+      border: 1px solid var(--gray-medium);
+      border-radius: 6px;
+      text-align: center;
+      background-color: var(--gray-light);
+    }
+
+    #guardar-horario {
+      background-color: var(--main-color-primary);
+      color: var(--white-color);
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #guardar-horario:hover {
+      background-color: #009c5e; /* tono más oscuro del verde */
+    }
+
+    @media (max-width: 768px) {
+      table th, table td {
+        font-size: 0.8em;
+        padding: 6px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+    }
