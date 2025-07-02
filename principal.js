@@ -45,19 +45,19 @@ window.addEventListener("DOMContentLoaded", () => {
       intro: "🛠️ Estas son las funciones clave que te ayudarán a organizarte y sentirte mejor cada día."
     },
     {
-      element: document.querySelectorAll('.card-flip')[0], // DASHBOARD
+      element: document.querySelectorAll('.card-flip')[0], 
       intro: "📊 El <strong>Dashboard</strong> te permite visualizar tu progreso y acceder a métricas emocionales."
     },
     {
-      element: document.querySelectorAll('.card-flip')[1], // HORARIO
+      element: document.querySelectorAll('.card-flip')[1], 
       intro: "🕒 En <strong>Horario</strong> puedes estructurar tu día y crear hábitos saludables con recordatorios."
     },
     {
-      element: document.querySelectorAll('.card-flip')[2], // FORO
+      element: document.querySelectorAll('.card-flip')[2], 
       intro: "💬 <strong>Foro</strong> es tu espacio seguro para compartir, consultar y aprender con otros usuarios."
     },
     {
-      element: document.querySelectorAll('.card-flip')[3], // MENTI
+      element: document.querySelectorAll('.card-flip')[3], 
       intro: "🐾 <strong>Menti</strong> es tu acompañante emocional que te da soporte y crece contigo."
     },
     {
@@ -65,15 +65,15 @@ window.addEventListener("DOMContentLoaded", () => {
       intro: "💸 Aquí puedes consultar los planes disponibles según tu nivel de uso."
     },
     {
-      element: document.querySelectorAll('.plan')[0], // Plan Gratis
+      element: document.querySelectorAll('.plan')[0], 
       intro: "🎁 <strong>Plan Gratis</strong>: Ideal para comenzar a explorar con acceso limitado pero funcional."
     },
     {
-      element: document.querySelectorAll('.plan')[1], // Plan Plus
+      element: document.querySelectorAll('.plan')[1], 
       intro: "🌟 <strong>Plan Plus</strong>: Recomendado para estudiantes con acceso completo y soporte rápido."
     },
     {
-      element: document.querySelectorAll('.plan')[2], // Plan Pro
+      element: document.querySelectorAll('.plan')[2], 
       intro: "🚀 <strong>Plan Pro</strong>: Para profesionales y equipos que buscan personalización avanzada y asistencia 24/7."
     },
     {
