@@ -13,7 +13,7 @@ async function obtenerRespuestas() {
 window.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const origen = params.get("origen");
-  console.log("Origen recibido:", origen); // 👈 Ver esto en consola
+  console.log("Origen recibido:", origen); 
 
   const contenedor = document.getElementById("boton-dinamico");
   if (!contenedor) return;
@@ -166,19 +166,22 @@ function mostrarGraficos(respuestas) {
 function mostrarTabla(respuestas) {
   const tbody = document.querySelector('#tabla-respuestas tbody');
   tbody.innerHTML = '';
-  respuestas.forEach(r => {
-    const tr = document.createElement('tr');
-
-    const tdFecha = document.createElement('td');
-    tdFecha.textContent = r.fecha;
-    tr.appendChild(tdFecha);
-
-    const tdRespuestas = document.createElement('td');
-    tdRespuestas.textContent = r.respuestas.join(', ');
-    tr.appendChild(tdRespuestas);
-
-    tbody.appendChild(tr);
-  });
+  if(respuestas<5){
+    respuestas.forEach(r => {
+      
+      const tr = document.createElement('tr');
+      
+      const tdFecha = document.createElement('td');
+      tdFecha.textContent = r.fecha;
+      tr.appendChild(tdFecha);
+      
+      const tdRespuestas = document.createElement('td');
+      tdRespuestas.textContent = r.respuestas.join(', ');
+      tr.appendChild(tdRespuestas);
+      
+      tbody.appendChild(tr);
+    });
+  }
 }
 
 
