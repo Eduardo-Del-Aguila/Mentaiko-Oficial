@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <script defer src="../scripts/activities/login.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="welcome-header">
+            <h1>¡Bienvenido de nuevo!</h1>
+            <p>Inicia sesión y olvidate del estrés</p>
+        </div>
+
+        <h2 class="login-title">Inicia sesión en Mentaiko</h2>
+        <p>¡Bienvenido de nuevo! Por favor inicia sesión para continuar</p>
+
+        <div class="social-login">
+        <button class="social-btn">
+        GitHub
+        </button>
+        <button class="social-btn">
+        Google
+        </button>
+        </div>
+
+        <div class="divider">o</div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Correo electrónico o nombre de usuario</label>
+                <input type="text" id="email" placeholder="Ingresa tu correo o nombre de usuario" required>
+
+                <label class="pswd" for="pasword">Contraseña</label>
+                <input type="password" id="pasword" placeholder="******" required>
+
+            </div>
+            <button  type="submit" class="continue-btn">Continuar</button>
+        </form>
+
+        <div class="signup-link">
+            ¿No tienes una cuenta? <a href="./register.html">Regístrate</a>
+        </div>
+        <p id="mensaje-login" class="mensaje-login"></p>
+    </div>
+
+
+</body>
+</html>

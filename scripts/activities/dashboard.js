@@ -10,6 +10,28 @@ async function obtenerRespuestas() {
   mostrarTabla(data);
 }
 
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const origen = params.get("origen");
+  console.log("Origen recibido:", origen); // 👈 Ver esto en consola
+
+  const contenedor = document.getElementById("boton-dinamico");
+  if (!contenedor) return;
+
+  const boton = document.createElement("button");
+
+  if (origen === "bienvenida") {
+    boton.textContent = "Iniciar sesión";
+    boton.onclick = () => window.location.href = "login.html";
+  } else {
+    boton.textContent = "Volver";
+    boton.onclick = () => window.location.href = "index.html";
+  }
+
+  contenedor.appendChild(boton);
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const yaTieneDatos = localStorage.getItem("respuestasMentaiko");
   if (!yaTieneDatos) {
@@ -160,25 +182,7 @@ function mostrarTabla(respuestas) {
 }
 
 
+
+
+
 obtenerRespuestas();
-
-
-  // // Obtener los datos del almacenamiento local
-  // const respuestas = JSON.parse(localStorage.getItem("respuestasMentaiko")) || [];
-  
-  // // Ejemplo: mostrar en consola
-  // console.log("Respuestas recibidas:", respuestas);
-  
-  // // Ejemplo: contar por categoría
-  // const conteoPorCategoria = {};
-  // respuestas.forEach(r => {
-  //   conteoPorCategoria[r.categoria] = (conteoPorCategoria[r.categoria] || 0) + 1;
-  // });
-  
-  // // Mostrarlo en el HTML
-  // const dashboard = document.getElementById("dashboard");
-  // for (const [categoria, cantidad] of Object.entries(conteoPorCategoria)) {
-  //   const div = document.createElement("div");
-  //   div.textContent = `${categoria}: ${cantidad} respuestas`;
-  //   dashboard.appendChild(div);
-  // }

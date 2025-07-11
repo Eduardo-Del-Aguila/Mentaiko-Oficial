@@ -41,6 +41,15 @@ section{
   text-align: center;
 }
 
+.logueado {
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: default;
+  pointer-events: none; 
+}
+
 
 :root {
   --color-text-primary: #2CAB29;

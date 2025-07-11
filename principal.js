@@ -2,6 +2,14 @@
   document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const linksHeader = document.getElementById("links-header");
+    const boton = document.getElementById('btn-started');
+    const nombre = localStorage.getItem('userName');
+    console.log('Soy el gran nombre', nombre)
+    if (nombre && boton) {
+      boton.textContent = nombre;
+      boton.classList.add('logueado'); 
+    }
+
 
     menuToggle.addEventListener("click", () => {
         linksHeader.classList.toggle("active");
@@ -123,10 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const mensajeExito = document.getElementById('mensaje-confirmacion');
-mensajeExito.style.display = 'block';
-form.reset();
-setTimeout(() => {
-  mensajeExito.style.display = 'none';
-}, 5000);
+// const mensajeExito = document.getElementById('mensaje-confirmacion');
+// mensajeExito.style.display = 'block';
+// if()
+// form.reset();
+// setTimeout(() => {
+//   mensajeExito.style.display = 'none';
+// }, 5000);
 
