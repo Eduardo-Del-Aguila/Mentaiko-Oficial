@@ -15,12 +15,12 @@ formRegister.addEventListener('submit', async (e) => {
     return;
   }
 
-  try {
-    await fetch('https://mentaicoserver.onrender.com/api/auth/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, email, password })
-    });
+try {
+  const res = await fetch('https://mentaicoserver.onrender.com/api/auth/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, email, password })
+  });
 
 
     const data = await res.json();
