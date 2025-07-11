@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/activities/wireframe3.css">
-    <script src="../scripts/activities/wireframe3.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentaiko - Foro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-</body>
+  <header>
+    <h1>Foro Mentaiko</h1>
+    <p>Comparte tus dudas y experiencias con la comunidad</p>
+  </header>
 
+  <main>
+    <section class="foro-container">
+      <form id="foro-form">
+        <textarea id="pregunta" placeholder="Escribe tu pregunta o inquietud..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="respuestas">
+
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
