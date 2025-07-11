@@ -183,7 +183,7 @@ body{
   background-color: #00BF6F;
 }
 
-/* Estilos del botón final */
+
 .btn-final {
   display: inline-block;
   background-color: #00BF6F;
@@ -246,4 +246,12 @@ body{
   .card-pregunta {
     width: 80%;
   }
+}
+
+
+@media (max-width: 1040){
+
+    body{
+      overflow: auto;
+    }
 }

@@ -17,8 +17,12 @@
         });
     });
 
+  document.getElementById('logoutBtn').addEventListener('click', function () {
 
+    localStorage.removeItem('userName'); 
 
+    window.location.href = '/index.html'; 
+  })
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -27,13 +31,14 @@ window.addEventListener("DOMContentLoaded", () => {
   const btnSi = document.getElementById("btn-si");
   const btnNo = document.getElementById("btn-no");
 
-  const tutorialRespondido = localStorage.getItem("tutorialRespondido");
-  console.log("Respondido:", tutorialRespondido); 
-  localStorage.removeItem("tutorialRespondido")
+const tutorialRespondido = localStorage.getItem("tutorialRespondido");
 
-  if (!tutorialRespondido) {
-    popup.style.display = "flex";
-  }
+    if (!tutorialRespondido) {
+      popup.style.display = "flex";
+    } else {
+      popup.style.display = "none"; // mejor explícito que vacío
+    }
+
 
     btnSi.addEventListener("click", () => {;
         popup.style.display = "none";
@@ -103,10 +108,11 @@ window.addEventListener("DOMContentLoaded", () => {
         }).start();
     });
 
-  btnNo.addEventListener("click", () => {
+    btnNo.addEventListener("click", () => {
       popup.style.display = "none";
-      // localStorage.setItem("tutorialRespondido", "no");
-  });
+      localStorage.setItem("tutorialRespondido", "no");
+    });
+
     
 });
 
