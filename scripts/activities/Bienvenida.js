@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const userName = localStorage.getItem('userName');
 
-  if (userName) {
+  if (!userName) {
     const botonesOpcion = document.querySelectorAll('.btn-opcion');
     const grupos = document.querySelectorAll('.grupo-cards');
     const btnFinal = document.getElementById('btn-final');

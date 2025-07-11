@@ -5,7 +5,8 @@
     const boton = document.getElementById('btn-started');
     const nombre = localStorage.getItem('userName');
     console.log('Soy el gran nombre', nombre)
-    if (nombre && boton) {
+
+    if (nombre) {
       boton.textContent = nombre;
       boton.classList.add('logueado'); 
     }
