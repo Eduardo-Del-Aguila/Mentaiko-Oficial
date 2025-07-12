@@ -4,14 +4,18 @@
     const linksHeader = document.getElementById("links-header");
     const boton = document.getElementById('btn-started');
     const nombre = localStorage.getItem('userName');
-    const btnCover = document.querySelector('btn-text-cover')
+    const btnCover = document.querySelector('.btn-text-cover')
     const cerrarsesion = document.getElementById('logoutBtn')
     console.log('Soy el gran nombre', nombre)
 
     if (nombre) {
       boton.textContent = nombre;
       boton.classList.add('logueado');
-      btnCover.classList.add('logueado')
+
+    if (btnCover) {
+      btnCover.classList.add('logueado');
+    }
+
 
       cerrarsesion.style.display = "inline-block";
       
@@ -35,12 +39,12 @@ window.addEventListener("DOMContentLoaded", () => {
   const btnSi = document.getElementById("btn-si");
   const btnNo = document.getElementById("btn-no");
 
-const tutorialRespondido = localStorage.getItem("tutorialRespondido");
-
-    if (!tutorialRespondido) {
+  const tutorialRespondido = localStorage.getItem("tutorialRespondido");
+  console.log(tutorialRespondido)
+    if (tutorialRespondido=='no') {
       popup.style.display = "flex";
     } else {
-      popup.style.display = "none"; // mejor explícito que vacío
+      popup.style.display = "none"; 
     }
 
 

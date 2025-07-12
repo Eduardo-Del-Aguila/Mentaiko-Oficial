@@ -142,6 +142,9 @@ footer {
   font-size: var(--text-size-small);
   color: var(--gray-dark);
   margin-top: var(--spacing-xl);
+  bottom: 0;
+  width: 100%;
+  position: fixed;
 }
 
 @media screen and (max-width: 600px) {
