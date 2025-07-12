@@ -12,7 +12,7 @@
       boton.classList.add('logueado');
       btnCover.classList.add('logueado')
       const cerrarsesion = document.getElementById('logoutBtn')
-      cerrarsesion.classList.add('register')
+      cerrarsesion.style.display="block";
       cerrarsesion.addEventListener('click', function () {      
         localStorage.removeItem('userName'); 
         window.location.href = '/index.html';
