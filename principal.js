@@ -5,14 +5,16 @@
     const boton = document.getElementById('btn-started');
     const nombre = localStorage.getItem('userName');
     const btnCover = document.querySelector('btn-text-cover')
+    const cerrarsesion = document.getElementById('logoutBtn')
     console.log('Soy el gran nombre', nombre)
 
     if (nombre) {
       boton.textContent = nombre;
       boton.classList.add('logueado');
       btnCover.classList.add('logueado')
-      const cerrarsesion = document.getElementById('logoutBtn')
-      cerrarsesion.style.display="block";
+
+      cerrarsesion.style.display = "inline-block";
+      
       cerrarsesion.addEventListener('click', function () {      
         localStorage.removeItem('userName'); 
         window.location.href = '/index.html';
