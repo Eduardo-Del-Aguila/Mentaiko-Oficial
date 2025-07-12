@@ -10,10 +10,9 @@
     if (nombre) {
       boton.textContent = nombre;
       boton.classList.add('logueado');
-      btnCover.classList.add('')
+      btnCover.classList.add('logueado')
       const cerrarsesion = document.getElementById('logoutBtn')
-      cerrarsesion.classList('register')
-
+      cerrarsesion.classList.add('register')
       cerrarsesion.addEventListener('click', function () {      
         localStorage.removeItem('userName'); 
         window.location.href = '/index.html';
@@ -26,8 +25,6 @@
         linksHeader.classList.toggle("active");
         });
     });
-
-
 
 
 window.addEventListener("DOMContentLoaded", () => {
