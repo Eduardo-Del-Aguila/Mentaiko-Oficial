@@ -18,14 +18,14 @@ window.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("boton-dinamico");
   if (!contenedor) return;
 
-  const boton = document.createElement("button");
+  const boton = document.querySelector("button");
 
   if (origen === "bienvenida") {
     boton.textContent = "Iniciar sesión";
     boton.onclick = () => window.location.href = "login.html";
   } else {
     boton.textContent = "Volver";
-    boton.onclick = () => window.location.href = "index.html";
+    boton.onclick = () => window.location.href = "../index.html";
   }
 
   contenedor.appendChild(boton);
@@ -45,10 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function obtenerAleatorio(lista) {
       return lista[Math.floor(Math.random() * lista.length)];
     }
-
-    // Generar 30 respuestas simuladas con fechas distintas
     const simuladas = Array.from({ length: 30 }, (_, i) => {
-      const fecha = new Date(Date.now() - i * 3600 * 1000).toLocaleString(); // cada hora menos
+      const fecha = new Date(Date.now() - i * 3600 * 1000).toLocaleString(); 
       return {
         fecha,
         respuestas: [
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem("respuestasMentaiko", JSON.stringify(simuladas));
   }
 
-  // Luego llama a tus funciones normalmente
   obtenerRespuestas();
 });
 

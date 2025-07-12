@@ -1,42 +1,52 @@
 const form = document.getElementById('foro-form');
-const preguntaInput = document.getElementById('pregunta');
-const respuestasContainer = document.getElementById('respuestas');
-
-function guardarYMostrar(pregunta) {
-    const post = {
-        texto: pregunta,
-        fecha: new Date().toLocaleString()
-    };
-
-    const foroData = JSON.parse(localStorage.getItem('foro')) || [];
-    foroData.unshift(post);
-    localStorage.setItem('foro', JSON.stringify(foroData));
-
-    renderRespuestas();
-}
+const textarea = document.getElementById('pregunta');
+const respuestas = document.getElementById('respuestas');
 
 
-function renderRespuestas() {
-    const foroData = JSON.parse(localStorage.getItem('foro')) || [];
-    respuestasContainer.innerHTML = '';
-
-    foroData.forEach(post => {
-        const div = document.createElement('div');
-        div.classList.add('respuesta');
-        div.innerHTML = `<strong>${post.fecha}</strong><br>${post.texto}`;
-        respuestasContainer.appendChild(div);
-    });
-}
+let publicaciones = [];
 
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const texto = preguntaInput.value.trim();
-    if (texto) {
-    guardarYMostrar(texto);
-    preguntaInput.value = '';
-    }
+  e.preventDefault();
+
+  const texto = textarea.value.trim();
+  if (texto === '') return;
+
+  const nuevaPublicacion = {
+    autor: 'Usuario anónimo',
+    fecha: new Date().toLocaleDateString('es-PE', {
+      day: 'numeric', month: 'long', year: 'numeric'
+    }),
+    pregunta: texto,
+    comentarios: []
+  };
+
+  publicaciones.unshift(nuevaPublicacion);
+  renderPublicaciones();
+
+  textarea.value = '';
 });
 
 
-window.addEventListener('DOMContentLoaded', renderRespuestas);
+function renderPublicaciones() {
+  respuestas.innerHTML = '';
+
+  publicaciones.forEach((pub) => {
+    const pubDiv = document.createElement('div');
+    pubDiv.classList.add('publicacion');
+
+    pubDiv.innerHTML = `
+      <div class="publicacion-cabecera">
+        <strong>${pub.autor}</strong> <span class="fecha">· ${pub.fecha}</span>
+      </div>
+      <p class="pregunta">${pub.pregunta}</p>
+      <div class="comentarios">
+        ${pub.comentarios.length > 0
+          ? pub.comentarios.map(com => `<div class="comentario"><strong>${com.autor}</strong>: ${com.texto}</div>`).join('')
+          : `<div class="comentario"><em>No hay comentarios aún. Sé el primero en responder.</em></div>`}
+      </div>
+    `;
+
+    respuestas.appendChild(pubDiv);
+  });
+}

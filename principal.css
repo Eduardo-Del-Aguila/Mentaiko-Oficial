@@ -764,3 +764,17 @@ hr {
 /***********FINAL DE FOOTER**********/
 
 
+#logoutBtn{
+  display: none;
+  padding: 3px;
+  background: var(--green-pastel);
+}
+
+.register{
+  display: block;
+  padding: 3px;
+  background: var(--green-pastel);
+}
+
+
+

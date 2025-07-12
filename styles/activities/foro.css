@@ -5,10 +5,10 @@
   --main-color-primary: #00BF6F;
   --main-color-secundary: #D4FBF1;
 
-  --green-deep: #328E6E;        
-  --green-regular: #67AE6E;     
-  --green-soft: #90C67C;        
-  --green-pastel: #E1EEBC;      
+  --green-deep: #328E6E;
+  --green-regular: #67AE6E;
+  --green-soft: #90C67C;
+  --green-pastel: #E1EEBC;
 
   --background-color: #E5FBF2;
   --white-color: #FFFFFF;
@@ -16,19 +16,11 @@
   --gray-medium: #E0E0E0;
   --gray-dark: #777777;
 
-  --lightcyan: #00FFDE;
-  --lightgreen: #67AE6E; 
-
   --lowText-font-size: 16px;
   --text-size-small: 14px;
   --text-size-medium: 18px;
   --text-size-large: 24px;
   --text-size-xlarge: 32px;
-  --text-size-xxlarge: 40px;
-
-  --text-title-card: 24px;
-  --text-title-cardv2: 20px;
-  --text-paragraph: 16px;
 
   --box-shadow-primary: 0px 6px 50px -20px rgba(0, 0, 0, 0.2);
   --box-shadow-secondary: 0px 4px 15px rgba(0, 191, 111, 0.15);
@@ -45,19 +37,22 @@
   --spacing-xxl: 40px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
   background: var(--background-color);
   color: var(--gray-dark);
 }
 
 header {
-  background: var(--main-color-primary);
+  background-color: var(--main-color-primary);
   color: var(--white-color);
+  padding: var(--spacing-lg);
   text-align: center;
-  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 header h1 {
@@ -65,61 +60,100 @@ header h1 {
   font-size: var(--text-size-large);
 }
 
-header p {
-  margin-top: var(--spacing-xs);
-  font-weight: 300;
-}
-
 main {
-  max-width: 600px;
-  margin: var(--spacing-xl) auto;
-  padding: var(--spacing-md);
-  background: var(--white-color);
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--box-shadow-primary);
+  max-width: 800px;
+  margin: auto;
+  padding: var(--spacing-lg);
 }
 
-.foro-container {
+form {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
 }
 
 textarea {
-  width: 100%;
-  min-height: 100px;
   padding: var(--spacing-md);
   font-size: var(--lowText-font-size);
   border: 1px solid var(--gray-medium);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-medium);
   resize: vertical;
 }
 
 button {
   padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--green-deep);
-  color: var(--white-color);
+  background-color: var(--green-deep);
+  color: white;
   border: none;
   border-radius: var(--border-radius-small);
-  cursor: pointer;
   font-size: var(--lowText-font-size);
-  transition: background 0.3s ease;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: var(--color-text-secundary);
+  background-color: var(--color-text-secundary);
 }
 
-#respuestas {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
+h2 {
+  margin-top: var(--spacing-lg);
+  font-size: var(--text-size-medium);
+  color: var(--green-deep);
 }
 
-.respuesta {
-  background: var(--main-color-secundary);
+.publicacion {
+  background: var(--white-color);
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius-medium);
   padding: var(--spacing-md);
-  border-left: 4px solid var(--main-color-primary);
-  border-radius: var(--border-radius-small);
-  font-size: var(--text-paragraph);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--box-shadow-secondary);
+}
+
+.publicacion-cabecera {
+  font-size: var(--text-size-small);
+  color: var(--gray-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.publicacion .pregunta {
+  font-size: var(--lowText-font-size);
+  color: var(--gray-dark);
+  margin: var(--spacing-xs) 0;
+}
+
+.comentarios {
+  margin-top: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--green-soft);
+}
+
+.comentario {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--text-size-small);
+  color: var(--gray-dark);
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--gray-light);
+  font-size: var(--text-size-small);
+  color: var(--gray-dark);
+  margin-top: var(--spacing-xl);
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: var(--spacing-md);
+  }
+
+  textarea {
+    font-size: var(--text-size-small);
+  }
+
+  button {
+    font-size: var(--text-size-small);
+  }
 }

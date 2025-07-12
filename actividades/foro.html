@@ -4,27 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentaiko - Foro</title>
-  <link rel="stylesheet" href="../styles/activities/foro.css"/>
-  <script defer src="../scripts/activities/foro.js"></script>
+  <link rel="stylesheet" href="../styles/activities/foro.css" />
+  <script src="../scripts/activities/foro.js"></script>
 </head>
 <body>
   <header>
-    <h1>Foro Mentaiko</h1>
-    <p>Comparte tus dudas y experiencias con la comunidad</p>
+    <h1>🧠 Foro Mentaiko</h1>
+    <p>Comparte tus dudas, experiencias y apoya a otros estudiantes</p>
   </header>
 
   <main>
     <section class="foro-container">
       <form id="foro-form">
-        <textarea id="pregunta" placeholder="Escribe tu pregunta o inquietud..." required></textarea>
-        <button type="submit">Enviar</button>
+        <textarea id="pregunta" placeholder="Escribe una pregunta o inquietud..." required></textarea>
+        <button type="submit">Publicar</button>
       </form>
 
+      <h2>📋 Publicaciones recientes</h2>
       <div id="respuestas">
+        <div class="publicacion">
+          <div class="publicacion-cabecera">
+            <strong>Camila López</strong> <span class="fecha">· 10 julio 2025</span>
+          </div>
+          <p class="pregunta">¿Cómo puedo organizar mejor mi tiempo cuando tengo entregas y exámenes juntos?</p>
+          <div class="comentarios">
+            <div class="comentario">
+              <strong>Josué</strong>: Yo uso una app de calendario y separo bloques para estudio y descanso.
+            </div>
+            <div class="comentario">
+              <strong>Abigail</strong>: Intenta priorizar por dificultad. Empieza con lo más pesado primero.
+            </div>
+          </div>
+        </div>
+
+        <div class="publicacion">
+          <div class="publicacion-cabecera">
+            <strong>Lucas Romero</strong> <span class="fecha">· 9 julio 2025</span>
+          </div>
+          <p class="pregunta">Me cuesta concentrarme más de 30 minutos seguidos. ¿Algún consejo práctico?</p>
+          <div class="comentarios">
+            <div class="comentario">
+              <strong>Valeria</strong>: Prueba la técnica Pomodoro. Estudia 25 min y descansa 5.
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Mentaiko. Comunidad para estudiantes con propósito.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

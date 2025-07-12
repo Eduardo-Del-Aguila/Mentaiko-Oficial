@@ -4,11 +4,21 @@
     const linksHeader = document.getElementById("links-header");
     const boton = document.getElementById('btn-started');
     const nombre = localStorage.getItem('userName');
+    const btnCover = document.querySelector('btn-text-cover')
     console.log('Soy el gran nombre', nombre)
 
     if (nombre) {
       boton.textContent = nombre;
-      boton.classList.add('logueado'); 
+      boton.classList.add('logueado');
+      btnCover.classList.add('')
+      const cerrarsesion = document.getElementById('logoutBtn')
+      cerrarsesion.classList('register')
+
+      cerrarsesion.addEventListener('click', function () {      
+        localStorage.removeItem('userName'); 
+        window.location.href = '/index.html';
+      
+  })
     }
 
 
@@ -17,12 +27,7 @@
         });
     });
 
-  document.getElementById('logoutBtn').addEventListener('click', function () {
 
-    localStorage.removeItem('userName'); 
-
-    window.location.href = '/index.html'; 
-  })
 
 
 window.addEventListener("DOMContentLoaded", () => {

@@ -31,10 +31,10 @@ header {
 }
 
 #boton-dinamico{
-    background-color: rgb(255, 87, 87);
+    background-color: rgb(198, 255, 201);
     padding: 10px;
     text-decoration: none;
-    color:white;
+    color:rgb(0, 0, 0);
     border-radius: 10px;
 }
 
@@ -103,7 +103,6 @@ canvas {
 }
 
 
-/* ✅ MEDIA QUERY PARA HACERLO RESPONSIVE */
 @media screen and (max-width: 768px) {
     #dashboard {
         grid-template-columns: 1fr;
