@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
   display: flex;
   align-items: center;
@@ -379,3 +379,19 @@ p {
 }
 
 /* menu flotante */
+
+#btn-volver{
+  position:absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  margin: 20px;
+  background-color: var(--main-color-secundary);
+  border: solid var(--color-text-secundary);
+  border-radius: 10px;
+}
+
+#btn-volver:hover{
+  background-color: var(--color-text-primary);
+}
+

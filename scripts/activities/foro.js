@@ -28,6 +28,10 @@ form.addEventListener('submit', (e) => {
 });
 
 
+    const boton = document.getElementById("btn-volver");
+
+    boton.onclick = ( ) => window.location.href = "../index.html";
+
 function renderPublicaciones() {
   respuestas.innerHTML = '';
 

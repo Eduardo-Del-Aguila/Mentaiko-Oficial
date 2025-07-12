@@ -118,3 +118,7 @@ const emociones = {
         const widget = document.getElementById("mentiChat");
         widget.style.display = widget.style.display === "flex" ? "none" : "flex";
     }
+
+    const boton = document.getElementById("btn-volver");
+
+    boton.onclick = ( ) => window.location.href = "../index.html";
